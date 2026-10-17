@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cricket Game</title>
+    <link rel="stylesheet" href="/Project/Cricket Game/cricket.css">
+</head>
+<body>
+    <h1>Bat Ball Stump Game</h1>
+
+    <button onclick=" 
+        let randomNumber = Math.random() * 3;
+        let computerChoice = '';
+        
+        if (randomNumber > 0 && randomNumber <= 1) {
+            computerChoice = 'bat';
+        } else if (randomNumber > 1 && randomNumber <= 2) {
+            computerChoice = 'ball';
+        } else {
+            computerChoice = 'stump';
+        }
+
+        let resultMsg = '';
+        if (computerChoice === 'ball') {
+            resultMsg = 'user won';
+        } else if (computerChoice === 'stump') {
+            resultMsg = 'computer won';
+        } else if (computerChoice === 'bat') {
+            resultMsg = 'draw';
+        }
+
+        alert(`You have chosen bat.\nComputer choice is ${computerChoice}\nAnd ${resultMsg}`);
+    ">Bat</button>
+
+    <button onclick=" 
+        let randomNumber = Math.random() * 3;
+        let computerChoice = '';
+        
+        if (randomNumber > 0 && randomNumber <= 1) {
+            computerChoice = 'bat';
+        } else if (randomNumber > 1 && randomNumber <= 2) {
+            computerChoice = 'ball';
+        } else {
+            computerChoice = 'stump';
+        }
+
+        let resultMsg = '';
+        if (computerChoice === 'ball') {
+            resultMsg = 'draw';
+        } else if (computerChoice === 'stump') {
+            resultMsg = 'user won';
+        } else if (computerChoice === 'bat') {
+            resultMsg = 'computer won';
+        }
+
+        alert(`You have chosen ball.\nComputer choice is ${computerChoice}\nAnd ${resultMsg}`);
+    ">Ball</button>
+
+    <button onclick=" 
+        let randomNumber = Math.random() * 3;
+        let computerChoice = '';
+        
+        if (randomNumber > 0 && randomNumber <= 1) {
+            computerChoice = 'bat';
+        } else if (randomNumber > 1 && randomNumber <= 2) {
+            computerChoice = 'ball';
+        } else {
+            computerChoice = 'stump';
+        }
+
+        let resultMsg = '';
+        if (computerChoice === 'ball') {
+            resultMsg = 'computer won';
+        } else if (computerChoice === 'stump') {
+            resultMsg = 'draw';
+        } else if (computerChoice === 'bat') {
+            resultMsg = 'user won';
+        }
+
+        alert(`You have chosen stump.\nComputer choice is ${computerChoice}\nAnd ${resultMsg}`);
+    ">Stump</button>
+
+    <script src="/Project/Cricket Game/cricket.js"></script>
+</body>
+</html>
