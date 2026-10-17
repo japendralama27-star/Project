@@ -10,75 +10,21 @@
     <h1>Bat Ball Stump Game</h1>
 
     <button onclick=" 
-        let randomNumber = Math.random() * 3;
-        let computerChoice = '';
-        
-        if (randomNumber > 0 && randomNumber <= 1) {
-            computerChoice = 'bat';
-        } else if (randomNumber > 1 && randomNumber <= 2) {
-            computerChoice = 'ball';
-        } else {
-            computerChoice = 'stump';
-        }
-
-        let resultMsg = '';
-        if (computerChoice === 'ball') {
-            resultMsg = 'user won';
-        } else if (computerChoice === 'stump') {
-            resultMsg = 'computer won';
-        } else if (computerChoice === 'bat') {
-            resultMsg = 'draw';
-        }
-
-        alert(`You have chosen bat.\nComputer choice is ${computerChoice}\nAnd ${resultMsg}`);
+        let computerChoice=generateComputerChoice();
+        let resultMsg = getResult('bat',computerChoice);
+        showResult('bat',computerChoice,resultMsg);
     ">Bat</button>
 
     <button onclick=" 
-        randomNumber = Math.random() * 3;
-        computerChoice = '';
-        
-        if (randomNumber > 0 && randomNumber <= 1) {
-            computerChoice = 'bat';
-        } else if (randomNumber > 1 && randomNumber <= 2) {
-            computerChoice = 'ball';
-        } else {
-            computerChoice = 'stump';
-        }
-
-        resultMsg = '';
-        if (computerChoice === 'ball') {
-            resultMsg = 'draw';
-        } else if (computerChoice === 'stump') {
-            resultMsg = 'user won';
-        } else if (computerChoice === 'bat') {
-            resultMsg = 'computer won';
-        }
-
-        alert(`You have chosen ball.\nComputer choice is ${computerChoice}\nAnd ${resultMsg}`);
+        computerChoice=generateComputerChoice();
+        resultMsg = getResult('ball',computerChoice);
+        showResult('ball',computerChoice,resultMsg);
     ">Ball</button>
 
     <button onclick=" 
-        randomNumber = Math.random() * 3;
-        computerChoice = '';
-        
-        if (randomNumber > 0 && randomNumber <= 1) {
-            computerChoice = 'bat';
-        } else if (randomNumber > 1 && randomNumber <= 2) {
-            computerChoice = 'ball';
-        } else {
-            computerChoice = 'stump';
-        }
-
-        resultMsg = '';
-        if (computerChoice === 'ball') {
-            resultMsg = 'computer won';
-        } else if (computerChoice === 'stump') {
-            resultMsg = 'draw';
-        } else if (computerChoice === 'bat') {
-            resultMsg = 'user won';
-        }
-
-        alert(`You have chosen stump.\nComputer choice is ${computerChoice}\nAnd ${resultMsg}`);
+       computerChoice=generateComputerChoice();
+        resultMsg = getResult('stump',computerChoice);
+        showResult('stump',computerChoice,resultMsg);
     ">Stump</button>
 
     <script src="/Project/Cricket Game/cricket.js"></script>
