@@ -56,7 +56,5 @@ function getResult(userMove,computerMove)
 function showResult(userMove,computerMove,result)
 {
     console.log(score);
-    alert(`You have chosen ${userMove}.\nComputer choice is ${computerMove} \n 
-    ${result} \n
-    Won:${score.win},Lost:${score.lost},Tie: ${score.tie}`)
+    alert(`You have chosen ${userMove}.\nComputer choice is ${computerMove}\n${result}\n Won:${score.win},Lost:${score.lost},Tie: ${score.tie}`)
 }
