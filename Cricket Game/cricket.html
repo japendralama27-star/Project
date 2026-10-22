@@ -1,32 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cricket Game</title>
-    <link rel="stylesheet" href="/Project/Cricket Game/cricket.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bat Ball Stump Game</title>
+  <link rel="stylesheet" href="/Project/Cricket Game/cricket.css">
 </head>
 <body>
-    <h1>Bat Ball Stump Game</h1>
 
-    <button onclick=" 
-        let computerChoice=generateComputerChoice();
-        let resultMsg = getResult('bat',computerChoice);
-        showResult('bat',computerChoice,resultMsg);
+  <h1>Bat Ball Stump Game</h1>
+
+  <div class="game-container">
+    <!-- User Choice Buttons -->
+    <button onclick="
+      let computerChoice = generateComputerChoice();
+      let resultMsg = getResult('Bat', computerChoice);
+      showResult('Bat', computerChoice, resultMsg);
     ">Bat</button>
 
-    <button onclick=" 
-        computerChoice=generateComputerChoice();
-        resultMsg = getResult('ball',computerChoice);
-        showResult('ball',computerChoice,resultMsg);
+    <button onclick="
+      computerChoice = generateComputerChoice();
+      resultMsg = getResult('Ball', computerChoice);
+      showResult('Ball', computerChoice, resultMsg);
     ">Ball</button>
 
-    <button onclick=" 
-       computerChoice=generateComputerChoice();
-        resultMsg = getResult('stump',computerChoice);
-        showResult('stump',computerChoice,resultMsg);
+    <button onclick="
+      computerChoice = generateComputerChoice();
+      resultMsg = getResult('Stump', computerChoice);
+      showResult('Stump', computerChoice, resultMsg);
     ">Stump</button>
+  </div>
 
-    <script src="/Project/Cricket Game/cricket.js"></script>
+  <h3 id="user-move"></h3>
+  <h3 id="result"></h3>
+  <h3 id="score"></h3>
+
+  <button onclick="
+    localStorage.clear();
+    resetScore();
+  ">Reset</button>
+
+  <script src="/Project/Cricket Game/cricket.js"></script>
 </body>
 </html>
